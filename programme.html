@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programme • Fête de la Saint-Jean – Enghien</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
+        <span>Saint-Jean Enghien</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="/programme.html">Programme</a>
+        <a href="/folklore.html">Folklore</a>
+        <a href="/benevoles.html">Bénévoles</a>
+        <a href="/sponsors.html">Sponsors</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
+        🌙
+      </button>
+
+      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
+        ☰
+      </button>
+    </div>
+    <nav id="navMobile" class="nav-mobile">
+      <a href="/programme.html">Programme</a>
+      <a href="/folklore.html">Folklore</a>
+      <a href="/benevoles.html">Bénévoles</a>
+      <a href="/sponsors.html">Sponsors</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Programme du week-end</h1>
+      <p class="page-intro">Les horaires peuvent encore légèrement évoluer. Consultez régulièrement cette page.</p>
+
+      <section>
+        <h2>Samedi</h2>
+        <ul class="timeline">
+          <li><span class="time">14:00</span> Animations familiales au parc</li>
+          <li><span class="time">17:30</span> Ouverture du bar & petite restauration</li>
+          <li id="repas"><span class="time">19:00</span> Repas de la Saint-Jean (sous chapiteau)</li>
+          <li><span class="time">22:30</span> Allumage du grand feu 🔥</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Dimanche</h2>
+        <ul class="timeline">
+          <li><span class="time">10:00</span> Rassemblement pour la procession</li>
+          <li><span class="time">11:00</span> Procession & folklore dans le centre-ville</li>
+          <li><span class="time">13:00</span> Pique-nique au parc</li>
+          <li><span class="time">15:00</span> Concerts & animations</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
+      <div class="footer-links">
+        <a href="/contact.html">Contact</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="chatbot-root" class="chatbot-root"></div>
+
+  <script src="/assets/js/main.js" type="module"></script>
+  <script src="/assets/js/chatbot.js" type="module"></script>
+</body>
+</html>
+
