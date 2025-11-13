@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Fête de la Saint-Jean – Enghien</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
+        <span>Saint-Jean Enghien</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="/programme.html">Programme</a>
+        <a href="/folklore.html">Folklore</a>
+        <a href="/benevoles.html">Bénévoles</a>
+        <a href="/sponsors.html">Sponsors</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+
+      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
+        🌙
+      </button>
+
+      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
+        ☰
+      </button>
+    </div>
+    <nav id="navMobile" class="nav-mobile">
+      <a href="/programme.html">Programme</a>
+      <a href="/folklore.html">Folklore</a>
+      <a href="/benevoles.html">Bénévoles</a>
+      <a href="/sponsors.html">Sponsors</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="page-intro">
+        Une question, une envie d’être bénévole, devenir sponsor, réserver pour le repas ?
+        Écrivez-nous via ce formulaire.
+      </p>
+
+      <form id="contactForm" action="https://formspree.io/f/XXXXXXX" method="POST" class="section card">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="nom">Nom*</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" name="sujet" placeholder="Bénévolat, sponsor, réservation repas…">
+          </div>
+          <div class="form-field form-full">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
+          <div class="form-full">
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <p id="formMsg" style="font-size:0.85rem;margin-top:0.5rem;"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
+      <div class="footer-links">
+        <a href="/contact.html">Contact</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="chatbot-root" class="chatbot-root"></div>
+
+  <script src="/assets/js/main.js" type="module"></script>
+  <script src="/assets/js/chatbot.js" type="module"></script>
+</body>
+</html>
+
