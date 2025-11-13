@@ -26,21 +26,17 @@ body {
   min-height: 100vh;
 }
 
-/* Thèmes */
-/* Par défaut : thème sombre (déjà en place) */
-
+/* Light theme override when .theme-dark class is present */
 body.theme-dark {
   background: radial-gradient(circle at top, #f8fafc 0, #e5e7eb 55%);
   color: #0f172a;
 }
 
-/* Header clair */
 body.theme-dark .site-header {
   background: rgba(255, 255, 255, 0.9);
   border-bottom-color: rgba(148, 163, 184, 0.4);
 }
 
-/* Cartes claires */
 body.theme-dark .card,
 body.theme-dark .hero-card,
 body.theme-dark .map-wrapper,
@@ -50,7 +46,6 @@ body.theme-dark .section-alt {
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
 }
 
-/* Textes */
 body.theme-dark .hero-subtitle,
 body.theme-dark .infos-list li,
 body.theme-dark .timeline li,
@@ -58,20 +53,17 @@ body.theme-dark .page-intro {
   color: #4b5563;
 }
 
-/* Footer clair */
 body.theme-dark .site-footer {
   background: #0f172a;
   border-top-color: rgba(148, 163, 184, 0.4);
 }
 
-/* Liens nav */
 body.theme-dark .nav-links a {
   color: #4b5563;
 }
 body.theme-dark .nav-links a:hover {
   color: #0f172a;
 }
-
 
 /* Layout */
 
@@ -415,7 +407,60 @@ body.theme-dark .nav-links a:hover {
   color: #f97316;
 }
 
-/* Chatbot basic styling */
+/* Formulaires */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-field.form-full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  padding: 0.55rem 0.8rem;
+  font-size: 0.9rem;
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text);
+  width: 100%;
+}
+
+.form-field textarea {
+  border-radius: 1rem;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: #f97316;
+}
+
+.formMsg {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* Chatbot */
 
 .chatbot-toggle {
   border-radius: 999px;
@@ -494,7 +539,7 @@ body.theme-dark .nav-links a:hover {
   font-size: 0.8rem;
   line-height: 1.4;
 }
-.chatbot-bubble-bot {
+chatbot-bubble-bot {
   background: rgba(15, 23, 42, 0.96);
   border: 1px solid rgba(148, 163, 184, 0.7);
 }
@@ -532,8 +577,6 @@ body.theme-dark .nav-links a:hover {
   background: #f97316;
   color: #0b1120;
 }
-
-/* Chatbot root position */
 
 .chatbot-root {
   position: fixed;
@@ -581,55 +624,6 @@ body.theme-dark .nav-links a:hover {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-
-/* Formulaires (Contact) */
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem 1.5rem;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.form-field.form-full {
-  grid-column: 1 / -1;
-}
-
-.form-field label {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.form-field input,
-.form-field textarea {
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  padding: 0.55rem 0.8rem;
-  font-size: 0.9rem;
-  background: rgba(15, 23, 42, 0.9);
-  color: var(--text);
-  width: 100%;
-}
-
-.form-field textarea {
-  border-radius: 1rem;
-  min-height: 120px;
-  resize: vertical;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-  outline: none;
-  border-color: #f97316;
-}
-
-@media (max-width: 768px) {
   .form-grid {
     grid-template-columns: minmax(0, 1fr);
   }

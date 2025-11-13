@@ -14,7 +14,6 @@
         <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
         <span>Saint-Jean Enghien</span>
       </a>
-
       <nav class="nav-links">
         <a href="/programme.html">Programme</a>
         <a href="/folklore.html">Folklore</a>
@@ -22,14 +21,8 @@
         <a href="/sponsors.html">Sponsors</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
-        🌙
-      </button>
-
-      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
-        ☰
-      </button>
+      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">🌙</button>
+      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">☰</button>
     </div>
     <nav id="navMobile" class="nav-mobile">
       <a href="/programme.html">Programme</a>
@@ -45,45 +38,35 @@
       <h1>Sponsors & Partenaires</h1>
       <p class="page-intro">
         La Fête de la Saint-Jean s’organise grâce au soutien de partenaires locaux et régionaux.
-        Merci à toutes les entreprises, commerces et associations qui nous accompagnent.
       </p>
-
-      <section class="section">
-        <h2>Pourquoi devenir sponsor ?</h2>
-        <ul class="infos-list">
-          <li>Visibilité auprès d’un large public familial et local</li>
-          <li>Présence de votre logo sur les supports de communication</li>
-          <li>Association de votre image à un événement convivial et intergénérationnel</li>
-          <li>Possibilité de stand ou d’activation sur le site (selon formule)</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>Nos formules</h2>
-        <div class="cards-3">
-          <article class="card">
-            <h2>Partenaire feu 🔥</h2>
-            <p>Mise en avant principale autour du grand feu de la Saint-Jean.</p>
-          </article>
-          <article class="card">
-            <h2>Partenaire repas 🍽️</h2>
-            <p>Présence associée au repas du samedi soir et à l’espace chapiteau.</p>
-          </article>
-          <article class="card">
-            <h2>Partenaire animation 🎶</h2>
-            <p>Soutien des animations musicales, familiales et folkloriques.</p>
-          </article>
+      <form class="section card contact-form" data-type="sponsor" data-endpoint="https://TON-WORKER.workers.dev/contact">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="societe-s">Société*</label>
+            <input id="societe-s" name="societe" required>
+          </div>
+          <div class="form-field">
+            <label for="nom-s">Personne de contact*</label>
+            <input id="nom-s" name="nom" required>
+          </div>
+          <div class="form-field">
+            <label for="email-s">Email*</label>
+            <input id="email-s" name="email" type="email" required>
+          </div>
+          <div class="form-field">
+            <label for="tel-s">Téléphone</label>
+            <input id="tel-s" name="telephone">
+          </div>
+          <div class="form-field form-full">
+            <label for="interet-s">Votre intérêt</label>
+            <textarea id="interet-s" name="interet" rows="4" placeholder="Formule souhaitée, budget, idées…"></textarea>
+          </div>
+          <div class="form-field form-full">
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            <p class="formMsg"></p>
+          </div>
         </div>
-      </section>
-
-      <section class="section">
-        <h2>Dossier sponsor</h2>
-        <p>
-          Un dossier détaillé est disponible sur demande (formats et tarifs). N’hésitez pas à
-          nous contacter pour en discuter.
-        </p>
-        <a href="/contact.html" class="btn btn-primary">Nous contacter</a>
-      </section>
+      </form>
     </div>
   </main>
 
@@ -96,11 +79,8 @@
       </div>
     </div>
   </footer>
-
   <div id="chatbot-root" class="chatbot-root"></div>
-
   <script src="/assets/js/main.js" type="module"></script>
   <script src="/assets/js/chatbot.js" type="module"></script>
 </body>
 </html>
-
