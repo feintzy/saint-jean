@@ -3,131 +3,145 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fête de la Saint-Jean • Enghien</title>
-  <meta name="description" content="Fête de la Saint-Jean à Enghien : procession, folklore, repas, grand feu, animations tout le week-end.">
-  <link rel="icon" href="/assets/img/logo-saint-jean.svg">
+  <title>Fêtes de la Saint‑Jean • Enghien (Belgique)</title>
+  <meta name="description" content="Fêtes de la Saint-Jean à Enghien : chapiteau, remise des clés, feux, cortège folklorique, concerts, procession.">
+  <link rel="icon" href="/assets/img/logo.svg">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
-        <span>Saint-Jean Enghien</span>
+  <header class="header">
+    <div class="container navbar spread">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.svg" alt="Logo Saint-Jean">
+        <span>Fêtes de la Saint‑Jean • Enghien</span>
       </a>
-
-      <nav class="nav-links">
+      <nav class="navlinks" aria-label="Navigation principale">
         <a href="/programme.html">Programme</a>
-        <a href="/folklore.html">Folklore</a>
+        <a href="/infos.html">Infos</a>
         <a href="/benevoles.html">Bénévoles</a>
         <a href="/sponsors.html">Sponsors</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
-        🌙
-      </button>
-
-      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
-        ☰
-      </button>
+      <div class="hstack">
+        <button id="themeBtn" class="iconbtn" aria-label="Changer le thème">🌙</button>
+        <button id="burger" class="iconbtn burger" aria-label="Ouvrir le menu">☰</button>
+      </div>
     </div>
-    <nav id="navMobile" class="nav-mobile">
+    <div id="mobileNav" class="mobile" aria-label="Navigation mobile">
       <a href="/programme.html">Programme</a>
-      <a href="/folklore.html">Folklore</a>
+      <a href="/infos.html">Infos</a>
       <a href="/benevoles.html">Bénévoles</a>
       <a href="/sponsors.html">Sponsors</a>
       <a href="/contact.html">Contact</a>
-    </nav>
+    </div>
   </header>
+  <div class="notice"><b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !</div>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="badge">Enghien • Belgique</p>
-          <h1>Fête de la Saint-Jean <span class="accent">2025</span></h1>
-          <p class="hero-subtitle">
-            Un week-end de procession, folklore, musique, repas convivial et grand feu au parc et dans le centre-ville d’Enghien.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/programme.html">Voir le programme</a>
-            <a class="btn btn-outline" href="/benevoles.html">Devenir bénévole</a>
-          </div>
-          <p class="hero-note">21–22 juin 2025 • Parc d’Enghien & centre-ville</p>
+
+<main>
+  <section class="hero">
+    <div class="container heroWrap">
+      <div>
+        <div class="badge">Enghien • Belgique • 26 → 28 juin 2026</div>
+        <h1>Fêtes de la <span class="accent">Saint‑Jean</span> à Enghien</h1>
+        <p class="lead">
+          Faire renaître un folklore, à l’initiative de citoyens… pour les citoyens.
+          Trois jours de convivialité : chapiteau, remise des clés, grand feu, cortège folklorique,
+          concerts et procession.
+        </p>
+        <div class="actions">
+          <a class="btn btnPrimary" href="/programme.html">Voir le programme</a>
+          <a class="btn btnOutline" href="/contact.html">Nous contacter</a>
         </div>
-        <div class="hero-visual">
-          <div class="hero-card">
-            <div class="hero-fire">🔥</div>
-            <p>Grand feu de la Saint-Jean</p>
-            <span class="chip">Samedi soir</span>
-          </div>
-          <div class="hero-card secondary">
-            <p>Procession & folklore</p>
-            <span class="chip">Dimanche</span>
-          </div>
+        <div class="note">Programme issu de la réunion citoyenne — version de travail. Horaires susceptibles d’évoluer.</div>
+      </div>
+      <div class="heroCards">
+        <div class="heroCard">
+          <div style="font-size:2rem">🔥</div>
+          <div style="font-weight:800; margin-top:.25rem">Feux de la Saint‑Jean</div>
+          <div class="pill" style="margin-top:.5rem">Vendredi 26/06 • cortège 22h • feu 22h30</div>
+        </div>
+        <div class="heroCard secondary">
+          <div style="font-weight:800">Cortège & Géant “Titje”</div>
+          <div style="color:var(--muted); margin-top:.25rem">Baptême 15h • départ cortège 16h</div>
+          <div class="pill" style="margin-top:.5rem">Samedi 27/06</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container cards-3">
-        <article class="card">
-          <h2>Procession & traditions</h2>
-          <p>Costumes, musique, groupes folkloriques et ambiance chaleureuse dans les rues d’Enghien.</p>
-          <a href="/folklore.html" class="link">Découvrir le folklore →</a>
-        </article>
-        <article class="card">
-          <h2>Repas convivial</h2>
-          <p>Un grand repas sous chapiteau, en famille ou entre amis, avant le grand feu de la Saint-Jean.</p>
-          <a href="/programme.html#repas" class="link">Infos repas →</a>
-        </article>
-        <article class="card">
-          <h2>Bénévoles & sponsors</h2>
-          <p>L’événement existe grâce à vous. Rejoignez l’équipe ou devenez partenaire officiel.</p>
-          <a href="/benevoles.html" class="link">Comment aider →</a>
-        </article>
+  <section class="section">
+    <div class="container cards3">
+      <article class="card">
+        <p class="kicker">Vendredi 26/06/2026</p>
+        <h2>Ouverture + repas + feu</h2>
+        <p>Ouverture du chapiteau, remise des clés, repas, cortège vers le parc et mise à feu du bûcher.</p>
+        <div style="margin-top:1rem"><a class="btn btnOutline" href="/programme.html#vendredi">Voir le détail</a></div>
+      </article>
+      <article class="card">
+        <p class="kicker">Samedi 27/06/2026</p>
+        <h2>Activités + cortège + concerts</h2>
+        <p>Activités sportives/culturelles, foodtrucks, baptême du géant, cortège folklorique, concerts et soirée.</p>
+        <div style="margin-top:1rem"><a class="btn btnOutline" href="/programme.html#samedi">Voir le détail</a></div>
+      </article>
+      <article class="card">
+        <p class="kicker">Dimanche 28/06/2026</p>
+        <h2>Procession</h2>
+        <p>Remise des clés à la fin de la procession (12h). Détails du parcours à confirmer.</p>
+        <div style="margin-top:1rem"><a class="btn btnOutline" href="/programme.html#dimanche">Voir le détail</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="card">
+        <h2>Lieu</h2>
+        <p class="lead" style="max-width:none">
+          Site principal : <b>Place du Vieux Marché</b> (chapiteau 30×15m). Départ en cortège vers le parc pour le bûcher le vendredi.
+        </p>
+        <div style="margin-top:1rem">
+          <a class="btn btnPrimary" href="/infos.html">Infos pratiques</a>
+        </div>
       </div>
-    </section>
+      <div class="map">
+        <iframe title="Place du Vieux Marché, Enghien" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Place%20du%20Vieux%20March%C3%A9%2C%20Enghien%2C%20Belgique&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <section class="section section-alt">
-      <div class="container split">
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerTop">
         <div>
-          <h2>Infos pratiques</h2>
-          <ul class="infos-list">
-            <li><strong>Lieu :</strong> Parc d’Enghien & centre-ville</li>
-            <li><strong>Accès :</strong> Gare d’Enghien (train) + parkings balisés</li>
-            <li><strong>Conseil :</strong> privilégiez la marche ou le vélo si possible</li>
-          </ul>
-          <a href="/contact.html" class="btn btn-ghost">Nous contacter</a>
+          <div style="font-weight:800">Fêtes de la Saint‑Jean • Enghien</div>
+          <div style="color:var(--muted); margin-top:.25rem">Place du Vieux Marché & Parc d’Enghien • Belgique</div>
         </div>
-        <div class="map-wrapper">
-          <iframe
-            title="Parc d'Enghien"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Parc%20d'Enghien%2C%20Belgique&output=embed">
-          </iframe>
+        <div class="footerLinks">
+          <a href="/programme.html">Programme</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/mentions-legales.html">Mentions légales</a>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
-      <div class="footer-links">
-        <a href="/contact.html">Contact</a>
-        <a href="/mentions-legales.html">Mentions légales</a>
+      <div class="socialRow">
+        <span style="font-weight:600">Suivez‑nous :</span>
+        <div class="socialIcons" aria-label="Réseaux sociaux">
+          <a href="#" title="Facebook" aria-label="Facebook">f</a>
+          <a href="#" title="Instagram" aria-label="Instagram">◎</a>
+          <a href="#" title="TikTok" aria-label="TikTok">♫</a>
+          <a href="#" title="YouTube" aria-label="YouTube">▶</a>
+        </div>
+        <span style="margin-left:auto">© <span id="year"></span> • fetes.saint-jean.org</span>
       </div>
     </div>
   </footer>
-
-  <div id="chatbot-root" class="chatbot-root"></div>
-
-  <script src="/assets/js/main.js" type="module"></script>
-  <script src="/assets/js/chatbot.js" type="module"></script>
+  <div id="chatbotRoot" class="chatbot"></div>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/chatbot.js"></script>
 </body>
 </html>
 

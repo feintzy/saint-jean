@@ -3,93 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact • Fête de la Saint-Jean – Enghien</title>
+  <title>Contact • Fêtes de la Saint‑Jean – Enghien</title>
+  <meta name="description" content="Contact : questions, bénévoles, sponsors, repas.">
+  <link rel="icon" href="/assets/img/logo.svg">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
-        <span>Saint-Jean Enghien</span>
+  <header class="header">
+    <div class="container navbar spread">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.svg" alt="Logo Saint-Jean">
+        <span>Fêtes de la Saint‑Jean • Enghien</span>
       </a>
-
-      <nav class="nav-links">
+      <nav class="navlinks" aria-label="Navigation principale">
         <a href="/programme.html">Programme</a>
-        <a href="/folklore.html">Folklore</a>
+        <a href="/infos.html">Infos</a>
         <a href="/benevoles.html">Bénévoles</a>
         <a href="/sponsors.html">Sponsors</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
-        🌙
-      </button>
-
-      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
-        ☰
-      </button>
+      <div class="hstack">
+        <button id="themeBtn" class="iconbtn" aria-label="Changer le thème">🌙</button>
+        <button id="burger" class="iconbtn burger" aria-label="Ouvrir le menu">☰</button>
+      </div>
     </div>
-    <nav id="navMobile" class="nav-mobile">
+    <div id="mobileNav" class="mobile" aria-label="Navigation mobile">
       <a href="/programme.html">Programme</a>
-      <a href="/folklore.html">Folklore</a>
+      <a href="/infos.html">Infos</a>
       <a href="/benevoles.html">Bénévoles</a>
       <a href="/sponsors.html">Sponsors</a>
       <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="section">
-    <div class="container">
-      <h1>Contact</h1>
-      <p class="page-intro">
-        Une question, une envie d’être bénévole, devenir sponsor, réserver pour le repas ?
-        Écrivez-nous via ce formulaire.
-      </p>
-
-      <form id="contactForm" class="section card">
-        <div class="form-grid">
-          <div class="form-field">
-            <label for="nom">Nom*</label>
-            <input type="text" id="nom" name="nom" required>
-          </div>
-          <div class="form-field">
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-field form-full">
-            <label for="sujet">Sujet</label>
-            <input type="text" id="sujet" name="sujet" placeholder="Bénévolat, sponsor, réservation repas…">
-          </div>
-          <div class="form-field form-full">
-            <label for="message">Message*</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
-          <div class="form-field form-full">
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-            <p id="formMsg" style="font-size:0.85rem;margin-top:0.5rem;"></p>
-          </div>
-        </div>
-      </form>
     </div>
-  </main>
+  </header>
+  <div class="notice"><b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !</div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
-      <div class="footer-links">
-        <a href="/contact.html">Contact</a>
-        <a href="/mentions-legales.html">Mentions légales</a>
+
+<main class="section">
+  <div class="container">
+    <div class="card">
+      <h1>Contact</h1>
+      <p class="lead" style="max-width:none">Une question ? Une proposition ? Le site est en construction, mais on répond dès que possible.</p>
+    </div>
+
+    <form class="card contact-form" style="margin-top:1.2rem" data-type="general" data-endpoint="">
+      <div class="formGrid">
+        <div class="field">
+          <label for="nom">Nom*</label>
+          <input id="nom" name="nom" required />
+        </div>
+        <div class="field">
+          <label for="email">Email*</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="field full">
+          <label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet">
+            <option value="Question générale">Question générale</option>
+            <option value="Programme / horaires">Programme / horaires</option>
+            <option value="Bénévolat">Bénévolat</option>
+            <option value="Sponsor / partenariat">Sponsor / partenariat</option>
+            <option value="Repas">Repas</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="field full">
+          <button class="btn btnPrimary" type="submit">Envoyer</button>
+          <p class="formMsg">Branchement email à venir (Cloudflare Worker). Pour l’instant, rien n’est envoyé automatiquement.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerTop">
+        <div>
+          <div style="font-weight:800">Fêtes de la Saint‑Jean • Enghien</div>
+          <div style="color:var(--muted); margin-top:.25rem">Place du Vieux Marché & Parc d’Enghien • Belgique</div>
+        </div>
+        <div class="footerLinks">
+          <a href="/programme.html">Programme</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/mentions-legales.html">Mentions légales</a>
+        </div>
+      </div>
+      <div class="socialRow">
+        <span style="font-weight:600">Suivez‑nous :</span>
+        <div class="socialIcons" aria-label="Réseaux sociaux">
+          <a href="#" title="Facebook" aria-label="Facebook">f</a>
+          <a href="#" title="Instagram" aria-label="Instagram">◎</a>
+          <a href="#" title="TikTok" aria-label="TikTok">♫</a>
+          <a href="#" title="YouTube" aria-label="YouTube">▶</a>
+        </div>
+        <span style="margin-left:auto">© <span id="year"></span> • fetes.saint-jean.org</span>
       </div>
     </div>
   </footer>
-
-  <div id="chatbot-root" class="chatbot-root"></div>
-
-  <script src="/assets/js/main.js" type="module"></script>
-  <script src="/assets/js/chatbot.js" type="module"></script>
+  <div id="chatbotRoot" class="chatbot"></div>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/chatbot.js"></script>
 </body>
 </html>
 

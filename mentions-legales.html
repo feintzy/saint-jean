@@ -3,71 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentions légales • Fête de la Saint-Jean – Enghien</title>
+  <title>Mentions légales • Fêtes de la Saint‑Jean – Enghien</title>
+  <meta name="description" content="Mentions légales du site fetes.saint-jean.org">
+  <link rel="icon" href="/assets/img/logo.svg">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
-        <span>Saint-Jean Enghien</span>
+  <header class="header">
+    <div class="container navbar spread">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.svg" alt="Logo Saint-Jean">
+        <span>Fêtes de la Saint‑Jean • Enghien</span>
       </a>
-
-      <nav class="nav-links">
+      <nav class="navlinks" aria-label="Navigation principale">
         <a href="/programme.html">Programme</a>
-        <a href="/folklore.html">Folklore</a>
+        <a href="/infos.html">Infos</a>
         <a href="/benevoles.html">Bénévoles</a>
         <a href="/sponsors.html">Sponsors</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
-        🌙
-      </button>
-
-      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
-        ☰
-      </button>
+      <div class="hstack">
+        <button id="themeBtn" class="iconbtn" aria-label="Changer le thème">🌙</button>
+        <button id="burger" class="iconbtn burger" aria-label="Ouvrir le menu">☰</button>
+      </div>
     </div>
-    <nav id="navMobile" class="nav-mobile">
+    <div id="mobileNav" class="mobile" aria-label="Navigation mobile">
       <a href="/programme.html">Programme</a>
-      <a href="/folklore.html">Folklore</a>
+      <a href="/infos.html">Infos</a>
       <a href="/benevoles.html">Bénévoles</a>
       <a href="/sponsors.html">Sponsors</a>
       <a href="/contact.html">Contact</a>
-    </nav>
+    </div>
   </header>
+  <div class="notice"><b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !</div>
 
-  <main class="section">
-    <div class="container">
+
+<main class="section">
+  <div class="container">
+    <div class="card">
       <h1>Mentions légales</h1>
-      <p class="page-intro">
-        Ces informations sont données à titre indicatif. Adaptez le contenu selon votre structure.
+      <p class="lead" style="max-width:none">
+        Page à compléter selon votre structure (ASBL, comité, etc.).
       </p>
-      <p>
-        <strong>Éditeur :</strong> Comité Saint-Jean Enghien<br>
-        <strong>Responsable de la publication :</strong> [Nom du responsable]<br>
-        <strong>Hébergement :</strong> Netlify
+      <p style="color:var(--muted); line-height:1.6">
+        <b>Éditeur</b> : Comité citoyen des Fêtes de la Saint‑Jean (Enghien)<br>
+        <b>Contact</b> : via la page Contact<br>
+        <b>Hébergement</b> : GitHub Pages<br><br>
+        <b>Note</b> : Le site est en construction ; certaines informations peuvent être incomplètes ou évoluer.
       </p>
     </div>
-  </main>
+  </div>
+</main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
-      <div class="footer-links">
-        <a href="/contact.html">Contact</a>
-        <a href="/mentions-legales.html">Mentions légales</a>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerTop">
+        <div>
+          <div style="font-weight:800">Fêtes de la Saint‑Jean • Enghien</div>
+          <div style="color:var(--muted); margin-top:.25rem">Place du Vieux Marché & Parc d’Enghien • Belgique</div>
+        </div>
+        <div class="footerLinks">
+          <a href="/programme.html">Programme</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/mentions-legales.html">Mentions légales</a>
+        </div>
+      </div>
+      <div class="socialRow">
+        <span style="font-weight:600">Suivez‑nous :</span>
+        <div class="socialIcons" aria-label="Réseaux sociaux">
+          <a href="#" title="Facebook" aria-label="Facebook">f</a>
+          <a href="#" title="Instagram" aria-label="Instagram">◎</a>
+          <a href="#" title="TikTok" aria-label="TikTok">♫</a>
+          <a href="#" title="YouTube" aria-label="YouTube">▶</a>
+        </div>
+        <span style="margin-left:auto">© <span id="year"></span> • fetes.saint-jean.org</span>
       </div>
     </div>
   </footer>
-
-  <div id="chatbot-root" class="chatbot-root"></div>
-
-  <script src="/assets/js/main.js" type="module"></script>
-  <script src="/assets/js/chatbot.js" type="module"></script>
+  <div id="chatbotRoot" class="chatbot"></div>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/chatbot.js"></script>
 </body>
 </html>
 

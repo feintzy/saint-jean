@@ -3,91 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bénévoles • Fête de la Saint-Jean – Enghien</title>
+  <title>Bénévoles • Fêtes de la Saint‑Jean – Enghien</title>
+  <meta name="description" content="Rejoignez l'équipe bénévole des Fêtes de la Saint-Jean à Enghien.">
+  <link rel="icon" href="/assets/img/logo.svg">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
-        <span>Saint-Jean Enghien</span>
+  <header class="header">
+    <div class="container navbar spread">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.svg" alt="Logo Saint-Jean">
+        <span>Fêtes de la Saint‑Jean • Enghien</span>
       </a>
-
-      <nav class="nav-links">
+      <nav class="navlinks" aria-label="Navigation principale">
         <a href="/programme.html">Programme</a>
-        <a href="/folklore.html">Folklore</a>
+        <a href="/infos.html">Infos</a>
         <a href="/benevoles.html">Bénévoles</a>
         <a href="/sponsors.html">Sponsors</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
-        🌙
-      </button>
-
-      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
-        ☰
-      </button>
+      <div class="hstack">
+        <button id="themeBtn" class="iconbtn" aria-label="Changer le thème">🌙</button>
+        <button id="burger" class="iconbtn burger" aria-label="Ouvrir le menu">☰</button>
+      </div>
     </div>
-    <nav id="navMobile" class="nav-mobile">
+    <div id="mobileNav" class="mobile" aria-label="Navigation mobile">
       <a href="/programme.html">Programme</a>
-      <a href="/folklore.html">Folklore</a>
+      <a href="/infos.html">Infos</a>
       <a href="/benevoles.html">Bénévoles</a>
       <a href="/sponsors.html">Sponsors</a>
       <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="section">
-    <div class="container">
-      <h1>Bénévoles</h1>
-      <p class="page-intro">
-        La Fête de la Saint-Jean existe grâce à ses bénévoles. Rejoignez l’équipe pour faire vivre l’événement
-        avant, pendant et après le week-end !
-      </p>
-
-      <section class="cards-3">
-        <article class="card">
-          <h2>Avant la fête</h2>
-          <p>Montage, décoration, installation des zones (bar, chapiteau, signalétique, etc.).</p>
-        </article>
-        <article class="card">
-          <h2>Pendant la fête</h2>
-          <p>Bar, accueil, information, accompagnement du public, aide à la logistique.</p>
-        </article>
-        <article class="card">
-          <h2>Après la fête</h2>
-          <p>Démontage, rangement, nettoyage et dernier verre bien mérité avec l’équipe 🎉</p>
-        </article>
-      </section>
-
-      <section class="section">
-        <h2>Comment devenir bénévole ?</h2>
-        <p>
-          Pour rejoindre l’équipe, il vous suffit de remplir le formulaire de contact en précisant
-          <strong>« Bénévolat »</strong> dans le sujet, ou de nous écrire directement.
-        </p>
-        <a href="/contact.html" class="btn btn-primary">Je veux aider</a>
-      </section>
     </div>
-  </main>
+  </header>
+  <div class="notice"><b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !</div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
-      <div class="footer-links">
-        <a href="/contact.html">Contact</a>
-        <a href="/mentions-legales.html">Mentions légales</a>
+
+<main class="section">
+  <div class="container">
+    <div class="card">
+      <h1>Bénévoles</h1>
+      <p class="lead" style="max-width:none">
+        Envie d’aider ? Montage, bar, accueil, logistique, cortège… On est une équipe citoyenne.
+        Pour l’instant, passe par <b>Contact</b> et choisis “Bénévolat”.
+      </p>
+      <div style="margin-top:1rem">
+        <a class="btn btnPrimary" href="/contact.html">Je veux aider</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerTop">
+        <div>
+          <div style="font-weight:800">Fêtes de la Saint‑Jean • Enghien</div>
+          <div style="color:var(--muted); margin-top:.25rem">Place du Vieux Marché & Parc d’Enghien • Belgique</div>
+        </div>
+        <div class="footerLinks">
+          <a href="/programme.html">Programme</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/mentions-legales.html">Mentions légales</a>
+        </div>
+      </div>
+      <div class="socialRow">
+        <span style="font-weight:600">Suivez‑nous :</span>
+        <div class="socialIcons" aria-label="Réseaux sociaux">
+          <a href="#" title="Facebook" aria-label="Facebook">f</a>
+          <a href="#" title="Instagram" aria-label="Instagram">◎</a>
+          <a href="#" title="TikTok" aria-label="TikTok">♫</a>
+          <a href="#" title="YouTube" aria-label="YouTube">▶</a>
+        </div>
+        <span style="margin-left:auto">© <span id="year"></span> • fetes.saint-jean.org</span>
       </div>
     </div>
   </footer>
-
-  <div id="chatbot-root" class="chatbot-root"></div>
-
-  <script src="/assets/js/main.js" type="module"></script>
-  <script src="/assets/js/chatbot.js" type="module"></script>
+  <div id="chatbotRoot" class="chatbot"></div>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/chatbot.js"></script>
 </body>
 </html>
 

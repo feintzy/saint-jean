@@ -3,104 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sponsors & Partenaires • Fête de la Saint-Jean – Enghien</title>
+  <title>Sponsors • Fêtes de la Saint‑Jean – Enghien</title>
+  <meta name="description" content="Sponsors et partenaires des Fêtes de la Saint-Jean à Enghien.">
+  <link rel="icon" href="/assets/img/logo.svg">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="/assets/img/logo-saint-jean.svg" alt="Logo Saint-Jean Enghien">
-        <span>Saint-Jean Enghien</span>
+  <header class="header">
+    <div class="container navbar spread">
+      <a class="brand" href="/">
+        <img src="/assets/img/logo.svg" alt="Logo Saint-Jean">
+        <span>Fêtes de la Saint‑Jean • Enghien</span>
       </a>
-
-      <nav class="nav-links">
+      <nav class="navlinks" aria-label="Navigation principale">
         <a href="/programme.html">Programme</a>
-        <a href="/folklore.html">Folklore</a>
+        <a href="/infos.html">Infos</a>
         <a href="/benevoles.html">Bénévoles</a>
         <a href="/sponsors.html">Sponsors</a>
         <a href="/contact.html">Contact</a>
       </nav>
-
-      <button id="themeToggle" class="icon-button" aria-label="Basculer le thème">
-        🌙
-      </button>
-
-      <button id="navToggle" class="icon-button nav-toggle" aria-label="Ouvrir le menu">
-        ☰
-      </button>
+      <div class="hstack">
+        <button id="themeBtn" class="iconbtn" aria-label="Changer le thème">🌙</button>
+        <button id="burger" class="iconbtn burger" aria-label="Ouvrir le menu">☰</button>
+      </div>
     </div>
-    <nav id="navMobile" class="nav-mobile">
+    <div id="mobileNav" class="mobile" aria-label="Navigation mobile">
       <a href="/programme.html">Programme</a>
-      <a href="/folklore.html">Folklore</a>
+      <a href="/infos.html">Infos</a>
       <a href="/benevoles.html">Bénévoles</a>
       <a href="/sponsors.html">Sponsors</a>
       <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="section">
-    <div class="container">
-      <h1>Sponsors & Partenaires</h1>
-      <p class="page-intro">
-        La Fête de la Saint-Jean s’organise grâce au soutien de partenaires locaux et régionaux.
-        Merci à toutes les entreprises, commerces et associations qui nous accompagnent.
-      </p>
-
-      <section class="section">
-        <h2>Pourquoi devenir sponsor ?</h2>
-        <ul class="infos-list">
-          <li>Visibilité auprès d’un large public familial et local</li>
-          <li>Présence de votre logo sur les supports de communication</li>
-          <li>Association de votre image à un événement convivial et intergénérationnel</li>
-          <li>Possibilité de stand ou d’activation sur le site (selon formule)</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>Nos formules</h2>
-        <div class="cards-3">
-          <article class="card">
-            <h2>Partenaire feu 🔥</h2>
-            <p>Mise en avant principale autour du grand feu de la Saint-Jean.</p>
-          </article>
-          <article class="card">
-            <h2>Partenaire repas 🍽️</h2>
-            <p>Présence associée au repas du samedi soir et à l’espace chapiteau.</p>
-          </article>
-          <article class="card">
-            <h2>Partenaire animation 🎶</h2>
-            <p>Soutien des animations musicales, familiales et folkloriques.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Dossier sponsor</h2>
-        <p>
-          Un dossier détaillé est disponible sur demande (formats et tarifs). N’hésitez pas à
-          nous contacter pour en discuter.
-        </p>
-        <a href="/contact.html" class="btn btn-primary">Nous contacter</a>
-      </section>
     </div>
-  </main>
+  </header>
+  <div class="notice"><b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !</div>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Comité Saint-Jean Enghien • saint-jean.org</p>
-      <div class="footer-links">
-        <a href="/contact.html">Contact</a>
-        <a href="/mentions-legales.html">Mentions légales</a>
+
+<main class="section">
+  <div class="container">
+    <div class="card">
+      <h1>Sponsors & partenaires</h1>
+      <p class="lead" style="max-width:none">
+        Vous souhaitez soutenir la renaissance du folklore ? Visibilité locale, présence sur supports, chapiteau, etc.
+        Contactez‑nous et on construit une formule adaptée.
+      </p>
+      <div style="margin-top:1rem">
+        <a class="btn btnPrimary" href="/contact.html">Proposer un sponsoring</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerTop">
+        <div>
+          <div style="font-weight:800">Fêtes de la Saint‑Jean • Enghien</div>
+          <div style="color:var(--muted); margin-top:.25rem">Place du Vieux Marché & Parc d’Enghien • Belgique</div>
+        </div>
+        <div class="footerLinks">
+          <a href="/programme.html">Programme</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/mentions-legales.html">Mentions légales</a>
+        </div>
+      </div>
+      <div class="socialRow">
+        <span style="font-weight:600">Suivez‑nous :</span>
+        <div class="socialIcons" aria-label="Réseaux sociaux">
+          <a href="#" title="Facebook" aria-label="Facebook">f</a>
+          <a href="#" title="Instagram" aria-label="Instagram">◎</a>
+          <a href="#" title="TikTok" aria-label="TikTok">♫</a>
+          <a href="#" title="YouTube" aria-label="YouTube">▶</a>
+        </div>
+        <span style="margin-left:auto">© <span id="year"></span> • fetes.saint-jean.org</span>
       </div>
     </div>
   </footer>
-
-  <div id="chatbot-root" class="chatbot-root"></div>
-
-  <script src="/assets/js/main.js" type="module"></script>
-  <script src="/assets/js/chatbot.js" type="module"></script>
+  <div id="chatbotRoot" class="chatbot"></div>
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/chatbot.js"></script>
 </body>
 </html>
 
