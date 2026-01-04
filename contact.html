@@ -3,100 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact • Fêtes de la Saint‑Jean – Enghien</title>
-  <meta name="description" content="Contact : questions, bénévoles, sponsors, repas.">
-  <link rel="icon" href="/assets/img/logo.svg">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <title>Contact • Fêtes de la Saint-Jean – Enghien</title>
+  <meta name="description" content="Contactez l’équipe des Fêtes de la Saint-Jean à Enghien : questions, bénévolat, sponsoring, repas, presse." />
+  <link rel="icon" href="./assets/img/logo.svg">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
     <div class="container navbar spread">
-      <a class="brand" href="/">
-        <img src="/assets/img/logo.svg" alt="Logo Saint-Jean">
-        <span>Fêtes de la Saint‑Jean • Enghien</span>
+      <a class="brand" href="./">
+        <img src="./assets/img/logo.svg" alt="Logo Saint-Jean">
+        <span>Fêtes de la Saint-Jean • Enghien</span>
       </a>
+
       <nav class="navlinks" aria-label="Navigation principale">
-        <a href="/programme.html">Programme</a>
-        <a href="/infos.html">Infos</a>
-        <a href="/benevoles.html">Bénévoles</a>
-        <a href="/sponsors.html">Sponsors</a>
-        <a href="/contact.html">Contact</a>
+        <a href="./programme.html">Programme</a>
+        <a href="./infos.html">Infos</a>
+        <a href="./benevoles.html">Bénévoles</a>
+        <a href="./sponsors.html">Sponsors</a>
+        <a href="./contact.html" aria-current="page">Contact</a>
       </nav>
+
       <div class="hstack">
         <button id="themeBtn" class="iconbtn" aria-label="Changer le thème">🌙</button>
         <button id="burger" class="iconbtn burger" aria-label="Ouvrir le menu">☰</button>
       </div>
     </div>
+
     <div id="mobileNav" class="mobile" aria-label="Navigation mobile">
-      <a href="/programme.html">Programme</a>
-      <a href="/infos.html">Infos</a>
-      <a href="/benevoles.html">Bénévoles</a>
-      <a href="/sponsors.html">Sponsors</a>
-      <a href="/contact.html">Contact</a>
+      <a href="./programme.html">Programme</a>
+      <a href="./infos.html">Infos</a>
+      <a href="./benevoles.html">Bénévoles</a>
+      <a href="./sponsors.html">Sponsors</a>
+      <a href="./contact.html" aria-current="page">Contact</a>
     </div>
   </header>
-  <div class="notice"><b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !</div>
 
+  <div class="notice">
+    <b>Site en construction</b> : certaines informations peuvent être incomplètes ou évoluer. Merci !
+  </div>
 
-<main class="section">
-  <div class="container">
-    <div class="card">
-      <h1>Contact</h1>
-      <p class="lead" style="max-width:none">Une question ? Une proposition ? Le site est en construction, mais on répond dès que possible.</p>
-    </div>
+  <!-- Main -->
+  <main class="section">
+    <div class="container">
+      <div class="card">
+        <h1>Contact</h1>
+        <p class="page-intro">
+          Une question sur le programme ? Envie de devenir bénévole ? Proposition de sponsoring ou question sur le repas ?
+          Choisis un sujet : cela enverra ton message directement à la bonne équipe.
+        </p>
+        <p class="page-intro" style="margin-top:.6rem">
+          <b>Adresse</b> : Place du Vieux Marché, Enghien (Belgique).
+        </p>
+      </div>
 
-    <form class="card contact-form" style="margin-top:1.2rem" data-type="general" data-endpoint="">
-      <div class="formGrid">
-        <div class="field">
-          <label for="nom">Nom*</label>
-          <input id="nom" name="nom" required />
+      <!-- Form -->
+      <form
+        class="card contact-form"
+        style="margin-top:1.2rem"
+        data-type="general"
+        data-endpoint="https://api.saint-jean.org/contact"
+      >
+        <!-- Honeypot anti-spam (doit rester caché) -->
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="formGrid">
+          <div class="field">
+            <label for="nom">Nom*</label>
+            <input id="nom" name="nom" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email*</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="field full">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option value="Question générale">Question générale</option>
+              <option value="Programme / horaires">Programme / horaires</option>
+              <option value="Bénévolat">Bénévolat</option>
+              <option value="Sponsor / partenariat">Sponsor / partenariat</option>
+              <option value="Repas">Repas</option>
+              <option value="Presse">Presse</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" required placeholder="Écris ton message ici…"></textarea>
+          </div>
+
+          <div class="field full">
+            <button class="btn btnPrimary" type="submit">Envoyer</button>
+            <p class="formMsg"></p>
+          </div>
         </div>
-        <div class="field">
-          <label for="email">Email*</label>
-          <input id="email" name="email" type="email" required />
+
+        <div style="margin-top:1rem; color:var(--muted); font-size:.9rem; line-height:1.5">
+          <b>À savoir :</b> ce formulaire envoie un email à l’équipe concernée selon le sujet.
+          Si tu ne reçois pas de réponse rapidement, n’hésite pas à relancer — l’organisation est bénévole 🙂
         </div>
-        <div class="field full">
-          <label for="sujet">Sujet</label>
-          <select id="sujet" name="sujet">
-            <option value="Question générale">Question générale</option>
-            <option value="Programme / horaires">Programme / horaires</option>
-            <option value="Bénévolat">Bénévolat</option>
-            <option value="Sponsor / partenariat">Sponsor / partenariat</option>
-            <option value="Repas">Repas</option>
-            <option value="Autre">Autre</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="message">Message*</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <div class="field full">
-          <button class="btn btnPrimary" type="submit">Envoyer</button>
-          <p class="formMsg">Branchement email à venir (Cloudflare Worker). Pour l’instant, rien n’est envoyé automatiquement.</p>
+      </form>
+
+      <!-- Map (optional but nice) -->
+      <div class="card" style="margin-top:1.2rem">
+        <h2>Nous trouver</h2>
+        <p class="page-intro">Place du Vieux Marché, Enghien</p>
+        <div class="map">
+          <iframe
+            title="Place du Vieux Marché, Enghien"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Place%20du%20Vieux%20March%C3%A9%2C%20Enghien%2C%20Belgique&output=embed">
+          </iframe>
         </div>
       </div>
-    </form>
-  </div>
-</main>
+    </div>
+  </main>
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footerTop">
         <div>
-          <div style="font-weight:800">Fêtes de la Saint‑Jean • Enghien</div>
-          <div style="color:var(--muted); margin-top:.25rem">Place du Vieux Marché & Parc d’Enghien • Belgique</div>
+          <div style="font-weight:800">Fêtes de la Saint-Jean • Enghien</div>
+          <div style="color:var(--muted); margin-top:.25rem">
+            Place du Vieux Marché & Parc d’Enghien • Belgique
+          </div>
         </div>
         <div class="footerLinks">
-          <a href="/programme.html">Programme</a>
-          <a href="/contact.html">Contact</a>
-          <a href="/mentions-legales.html">Mentions légales</a>
+          <a href="./programme.html">Programme</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./mentions-legales.html">Mentions légales</a>
         </div>
       </div>
+
       <div class="socialRow">
-        <span style="font-weight:600">Suivez‑nous :</span>
+        <span style="font-weight:600">Suivez-nous :</span>
         <div class="socialIcons" aria-label="Réseaux sociaux">
+          <!-- Remplace les href par tes vrais liens -->
           <a href="#" title="Facebook" aria-label="Facebook">f</a>
           <a href="#" title="Instagram" aria-label="Instagram">◎</a>
           <a href="#" title="TikTok" aria-label="TikTok">♫</a>
@@ -106,9 +156,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Chatbot -->
   <div id="chatbotRoot" class="chatbot"></div>
-  <script type="module" src="/assets/js/main.js"></script>
-  <script type="module" src="/assets/js/chatbot.js"></script>
+
+  <!-- Scripts -->
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/chatbot.js"></script>
 </body>
 </html>
-
