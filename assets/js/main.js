@@ -20,3 +20,43 @@ if (themeBtn) {
     paint();
   });
 }
+
+// --- Contact forms -> Cloudflare Worker (Resend) ---
+document.querySelectorAll("form.contact-form").forEach((form) => {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // empêche le refresh
+
+    const endpoint = form.dataset.endpoint;
+    const msg = form.querySelector(".formMsg");
+
+    if (!endpoint) {
+      if (msg) msg.textContent = "Configuration manquante : endpoint non défini.";
+      return;
+    }
+
+    const payload = Object.fromEntries(new FormData(form));
+    payload.type = form.dataset.type || "general";
+
+    if (msg) msg.textContent = "Envoi en cours…";
+
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (res.ok) {
+        form.reset();
+        if (msg) msg.textContent = "Merci ! Votre message a bien été envoyé.";
+      } else {
+        const t = await res.text().catch(() => "");
+        console.error("[contact] server error:", t);
+        if (msg) msg.textContent = "Oups, erreur côté serveur. Réessayez plus tard.";
+      }
+    } catch (err) {
+      console.error("[contact] fetch failed:", err);
+      if (msg) msg.textContent = "Erreur réseau. Réessayez plus tard.";
+    }
+  });
+});
