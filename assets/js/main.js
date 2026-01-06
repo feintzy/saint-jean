@@ -1,3 +1,6 @@
+window.__SJ_MAIN_LOADED__ = true;
+console.log("[SJ] main.js loaded", location.href);
+
 const y = document.getElementById("year");
 if (y) y.textContent = new Date().getFullYear();
 
